@@ -1,11 +1,11 @@
 public class Card{
  
   
-  String rank; 
+  private String rank; 
   
-  String color;
+  private String color;
   
-  String suit;
+  private String suit;
 
   public Card(){
     rank = "A";
@@ -13,6 +13,29 @@ public class Card{
     suit = "club";
   }
 
+  public String getRank(){
+    return rank;
+  }
+  public void setRank(String newRank){
+    
+    rank= newRank;
+  }
+  public String getColor(){
+    return color;
+  }
+  public void setColor(String newColor){
+    color= newColor;
+  }
+  
+  public String getSuit(){
+    return suit;
+  }
+  public void setSuit(String newSuit){
+    suit= newSuit;
+  }
+  
+  
+  
   public String toString(){
     return rank + " " + color + " " + suit;
   }

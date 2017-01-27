@@ -4,7 +4,7 @@ public class TTTPlayer{
   private boolean hasWon;
   
   
-  public TTTplayer(){
+  public TTTPlayer(){
     String name = "player 1";
     String xo = "x";
     Boolean Haswon = false; 
@@ -16,28 +16,24 @@ public class TTTPlayer{
   public void setName(String newName){
     name = newName;
   }
-  public String toString(){
-    return name + " " + xo + " " + hasWon;
-  }
+
    public String getxo(){
     return xo;
   }
   public void setxo(String newxo){
     xo = newxo;
   }
-  public String toString(){
-    return name + " " + xo + " " + hasWon;
-  
-   public String gethasWon(){
+
+   public boolean gethasWon(){
     return hasWon;
   }
-  public void sethasWon(String newhasWon){
+  public void sethasWon(boolean newhasWon){
     hasWon = newhasWon;
   }
   public String toString(){
     return name + " " + xo + " " + hasWon;
     
-    
+  }
     
 }
   

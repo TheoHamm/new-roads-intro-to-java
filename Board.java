@@ -1,4 +1,5 @@
- import java.util.Scanner;
+
+import java.util.Scanner;
 
 public class Board{
   
@@ -25,6 +26,13 @@ public class Board{
      
      if(row == 1){
        row1[col - 1] = move;
+     
+     }
+     if(row == 2){
+       row2[col - 1] = move;
+     }
+      if(row == 3){
+       row3[col - 1] = move;
      }
      
      printBoard();
@@ -36,9 +44,10 @@ public class Board{
     
      System.out.println(" " + row1[0] + " | " +row1[1] + "  |  " +row1[2] + " ");
      System.out.println("____________");
-     System.out.println("   |    |   ");
+     System.out.println(" " + row2[0] + " | " +row2[1] + "  |  " +row2[2] + " ");
      System.out.println("____________");
-     System.out.println("   |    |   "); 
+     System.out.println(" " + row3[0] + " | " +row3[1] + "  |  " +row3[2] + " ");
   }//end of print board
+  
   
  }//end of class

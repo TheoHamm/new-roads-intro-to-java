@@ -24,7 +24,29 @@ public class Board{
      
      int col = input.nextInt();
      
-     if(row == 1){
+     makemove (row,col,move);
+     
+     while(noWinner()){
+       System.out.println("Enter a row: ");
+
+       row = input.nextInt();
+
+       System.out.println("Enter a column: ");
+
+       col = input.nextInt();
+
+       makemove (row,col,move);
+     }
+     
+     
+   }//end main
+  
+  public static boolean noWinner(){
+    return true;
+  }
+  
+  public static void makemove(int row, int col, char move){
+    if(row == 1){
        row1[col - 1] = move;
      
      }
@@ -36,8 +58,7 @@ public class Board{
      }
      
      printBoard();
-     
-   }//end main
+  }
   
   //prints the board
   public static void printBoard(){

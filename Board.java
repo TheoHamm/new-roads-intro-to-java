@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Board{
@@ -6,37 +5,17 @@ public class Board{
   static char[] row1 = {' ', ' ', ' '};
   static char[] row2 = {' ', ' ', ' '};
   static char[] row3 = {' ', ' ', ' '};
+  public static char move;
+  public static int row;
+  public static int col;
    
     //logic of the program
    public static void main(String[] args){
-     
+   
     System.out.println("enter x or o");
-       
-    Scanner input = new Scanner(System.in);
      
-    char move = input.next().charAt(0); 
-     
-     System.out.println("Enter a row: ");
-     
-     int row = input.nextInt();
-     
-     System.out.println("Enter a column: ");
-     
-     int col = input.nextInt();
-     
-     makemove (row,col,move);
-     
-     while(noWinner()){
-       System.out.println("Enter a row: ");
-
-       row = input.nextInt();
-
-       System.out.println("Enter a column: ");
-
-       col = input.nextInt();
-
-       makemove (row,col,move);
-     }
+     Logic.logic();
+    
      
      
    }//end main

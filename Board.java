@@ -14,9 +14,13 @@ public class Board{
    
     System.out.println("enter x or o");
      
-     Logic.logic();
-    
+     boolean keepGoing = Logic.logic();
      
+     while(keepGoing){
+      System.out.println("enter x or o");  
+       keepGoing = Logic.logic();
+     }  
+      
      
    }//end main
   
@@ -49,5 +53,15 @@ public class Board{
      System.out.println(" " + row3[0] + " | " +row3[1] + "  |  " +row3[2] + " ");
   }//end of print board
   
+  public static boolean checkSpot(){
+    if(row == 1){
+      if(row1[col] != ' '){
+        return false;
+      }
+      else{
+        return true;
+      }
+    }
+  }
   
  }//end of class

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Logic{
 
-   public static void logic() {
+   public static boolean logic() {
     Scanner input = new Scanner(System.in);
       Board.move = input.next().charAt(0); 
        if(Board.move == 'x' || Board.move == 'o'){
@@ -15,10 +15,14 @@ public class Logic{
             Board.makemove (Board.row,Board.col,Board.move);
            }
           }
+         
+         return true;
         }
     else{
       System.out.println("Wrong!");
-      Logic.logic();
+      
+      return false;
+      //Logic.logic();
     }
    }
 }
